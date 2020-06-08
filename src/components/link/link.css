@@ -1,0 +1,14 @@
+.downloadIcon, .linkIcon {
+  width: 1em;
+  opacity: 0.6;
+  margin-right: 0.75em;
+  vertical-align: text-bottom;
+}
+
+.link a {
+  text-decoration: none;
+}
+
+.link a:hover .downloadIcon, .link a:hover .linkIcon {
+  opacity: 0.8;
+}

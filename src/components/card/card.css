@@ -1,0 +1,134 @@
+.card {
+  display: inline-block;
+  min-height: 14em;
+  min-width: 12em;
+  border-radius: 3px;
+  margin-bottom: 1em;
+  font-family: 'Raleway', sans-serif;
+  width: 24%;
+}
+@media only screen and (max-width: 800px) {
+  .card { 
+    width: 32%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .card { 
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.card a {
+  color: black;
+}
+
+.cardTitle {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 0;
+  background: rgba(0,0,0, 0.5);
+  color: white;
+  padding: 0.5em;
+  border-radius: 3px;
+}
+
+.cardTitle:hover {
+  background: rgba(0,0,0, 0.7);
+}
+
+.card ul {
+  padding-left: 1em;
+  list-style-type: none;
+}
+
+.card ul li {
+  line-height: 2em;
+  margin-bottom: 1em;
+}
+
+.checkbox {
+  position: absolute; 
+  opacity: 0;
+}
+
+.checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.checkbox + label:before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.checkbox:hover + label:before {
+  background: #94949459;
+}
+  
+.checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.checkbox:checked + label:before {
+  background: grey;
+}
+
+.checkbox:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 
+    2px 0 0 white,
+    4px 0 0 white,
+    4px -2px 0 white,
+    4px -4px 0 white,
+    4px -6px 0 white,
+    4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+.card.checkboxes ul {
+  list-style-type: none;
+  padding-left: .5em;
+}
+
+.card:nth-of-type(1) {
+  background: #d5f6ca;
+}
+
+.card:nth-of-type(2) {
+  background: #cadff6;
+}
+
+.card:nth-of-type(3) {
+  background: #fee5fc;
+}
+
+.card:nth-of-type(4) {
+  background: #ade6d9;
+}
+
+.card:nth-of-type(5) {
+  background: #e3deff;
+}
+
+.card:nth-of-type(6) {
+  background: #faffde;
+}

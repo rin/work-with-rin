@@ -1,5 +1,6 @@
 import React, { ReactNode, Children, useState, SyntheticEvent } from 'react';
-import './card.css';
+import Checkbox from '../checkbox';
+import './card.scss';
 
 interface CardProps {
   title: string,
@@ -23,10 +24,7 @@ const Card = ({title, children, type = 'list'}: CardProps) => {
           <li>
             {type === 'list' && element}
             {type === 'checkboxes' && (
-              <>
-                <input type="checkbox" className="checkbox" id={`checkbox-${index}`} onChange={handleChecked} />
-                <label htmlFor={`checkbox-${index}`}>{element}</label>
-              </>
+              <Checkbox id={`checkbox-${index}`} onChange={handleChecked}>{element}</Checkbox>
             )}
           </li>
         ))}

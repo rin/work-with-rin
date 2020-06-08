@@ -1,5 +1,5 @@
 import React from 'react';
-import './rating.css';
+import './rating.scss';
 
 interface RatingProps {
   percentage: number;

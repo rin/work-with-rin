@@ -1,0 +1,74 @@
+@import '../../global.scss';
+
+.card {
+  display: inline-block;
+  min-height: 14em;
+  min-width: 12em;
+  border-radius: $borderRadius;
+  margin-bottom: 1em;
+  font-family: $bodyFontFamily;
+  width: 24%;
+  @media only screen and (max-width: 800px) {
+    width: 32%;
+  }
+  @media only screen and (max-width: 700px) {
+    width: 48%;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+
+  a {
+    color: black;
+  }
+
+  ul {
+    padding-left: 1em;
+    list-style-type: none;
+    li {
+      line-height: 2em;
+      margin-bottom: 1em;
+    }
+  }
+  &:nth-of-type(1) {
+    background: $pastelBackground1;
+  }
+  
+  &:nth-of-type(2) {
+    background: $pastelBackground2;
+  }
+  
+  &:nth-of-type(3) {
+    background: $pastelBackground3;
+  }
+  
+  &:nth-of-type(4) {
+    background: $pastelBackground4;
+  }
+  
+  &:nth-of-type(5) {
+    background: $pastelBackground5;
+  }
+  
+  &:nth-of-type(6) {
+    background: $pastelBackground6;
+  }  
+}
+
+.cardTitle {
+  font-family: $titleFontFamily;
+  margin-top: 0;
+  background-color: $cardTitleBackgroundColor;
+  color: $cardTitleColor;
+  padding: 0.5em;
+  border-radius: $borderRadius;
+  &:hover {
+    background-color: $cardTitleHoverBackgroundColor;
+  }
+}
+
+.card.checkboxes ul {
+  list-style-type: none;
+  padding-left: .5em;
+}
+

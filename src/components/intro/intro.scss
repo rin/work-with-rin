@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .introWrapper {
   display: flex;
   flex-direction: row;
@@ -7,14 +9,15 @@
 }
 
 .aboutText {
-  border-radius: 3px;
+  border-radius: $borderRadius;
+  font-family: $bodyFontFamily;
   width: 100%;
   margin-left: 1em;
   padding: 1em;
   background: #fae9c2;
+  p {
+    max-width: 30em;
+    line-height: 1.5;
+  }
 }
 
-.aboutText p {
-  max-width: 30em;
-  line-height: 1.5;
-}

@@ -6,7 +6,7 @@ import CardGrid from './components/cardGrid';
 import Rating from './components/rating';
 import Link from './components/link';
 
-import './App.css';
+import './App.scss';
 
 const App = () =>
   <div>

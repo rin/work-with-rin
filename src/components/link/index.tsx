@@ -1,5 +1,5 @@
 import React from 'react';
-import './link.css';
+import './link.scss';
 
 interface LinkProps {
   label: string;

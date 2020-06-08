@@ -1,6 +1,6 @@
 import React from 'react';
 import Portrait from '../portrait';
-import './intro.css'
+import './intro.scss'
 
 const Intro = () => 
 <div className='introWrapper'>

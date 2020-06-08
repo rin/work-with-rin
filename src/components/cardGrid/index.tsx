@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import './cardGrid.css';
+import './cardGrid.scss';
 
 interface CardGridProps {
   children: ReactNode;

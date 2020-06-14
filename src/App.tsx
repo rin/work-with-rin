@@ -7,6 +7,7 @@ import SkillList from './components/skillList';
 import Link from './components/link';
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
+import { LinkInterface, InterestInterface } from './types';
 import './App.scss';
 
 const query = gql`
@@ -40,22 +41,6 @@ const query = gql`
   }
 `;
 
-interface Link {
-  title: string;
-  type: string;
-  url: string;
-}
-
-interface Interest {
-  name: string;
-}
-
-interface Skill {
-  name: string;
-  rating: number;
-  marked: Boolean;
-}
-
 const App = () => {
   const { loading, error } = useQuery(query, { onCompleted: (data) => {
     setResponse(data);
@@ -79,7 +64,7 @@ const App = () => {
         <SkillList skills={response.tools} />
       </Card>
       <Card title="Interests" loading={loading}>
-        {interests.map(({name}: Interest) => (
+        {interests.map(({name}: InterestInterface) => (
           <span>{name}</span>
         ))}
       </Card>
@@ -89,7 +74,7 @@ const App = () => {
         <span>"Bring your whole self to work" culture<a title="Tell me more about it" href="https://www.forbes.com/sites/hennainam/2018/05/10/bring-your-whole-self-to-work/">[*]</a></span>
       </Card>
       <Card type="list" title="Links" loading={loading}>
-        {links.map(({title, type, url}: Link) => (
+        {links.map(({title, type, url}: LinkInterface) => (
            <Link type={type} url={url} label={title} />
           ))}
        </Card>

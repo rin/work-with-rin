@@ -2,11 +2,11 @@ import React from 'react';
 import Portrait from '../portrait';
 import './intro.scss'
 
-interface ContactInfo {
+interface IntroProps {
   email?: string;
 }
 
-const Intro = ({ email }: ContactInfo) => 
+const Intro = ({ email }: IntroProps) => 
 <div className='introWrapper'>
   <Portrait />
   <div className='aboutText'>

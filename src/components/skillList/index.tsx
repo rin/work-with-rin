@@ -1,20 +1,11 @@
 import React from 'react';
 import Rating from '../rating';
-// import './loadingSpinner.scss';
+import { SkillInterface, SkillListInterface } from '../../types';
 
-interface Skill {
-  name: string;
-  rating: number;
-  marked: Boolean;
-}
 
-interface SkillList {
-  skills: Array<Skill>
-}
-
-const SkillList = ({ skills } : SkillList) => (
+const SkillList = ({ skills } : SkillListInterface) => (
   <>
-    {skills.map(({name, rating, marked}: Skill) => (
+    {skills.map(({name, rating, marked}: SkillInterface) => (
       <span>
         {marked ? (
           <mark>{name}</mark>

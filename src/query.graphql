@@ -1,0 +1,28 @@
+ {
+    languages {
+      name
+      rating
+      marked
+    }
+    tools {
+      name
+      rating
+      marked
+    }
+    technologies {
+      name
+      rating
+      marked
+    }
+    links {
+      title
+      type
+      url
+    }
+    interests {
+      name
+    }
+    contact {
+      email
+    }
+  }

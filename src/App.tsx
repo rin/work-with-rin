@@ -6,42 +6,12 @@ import CardGrid from './components/cardGrid';
 import SkillList from './components/skillList';
 import Link from './components/link';
 import { useQuery } from "@apollo/react-hooks";
-import { gql } from "apollo-boost";
 import { LinkInterface, InterestInterface } from './types';
+import { loader } from 'graphql.macro';
 import './App.scss';
 
-const query = gql`
-  {
-    languages {
-      name
-      rating
-      marked
-    }
-    tools {
-      name
-      rating
-      marked
-    }
-    technologies {
-      name
-      rating
-      marked
-    }
-    links {
-      title
-      type
-      url
-    }
-    interests {
-      name
-    }
-    contact {
-      email
-    }
-  }
-`;
-
 const App = () => {
+  const query = loader('./query.graphql');
   const { loading, error } = useQuery(query, { onCompleted: (data) => {
     setResponse(data);
   }});
@@ -54,28 +24,28 @@ const App = () => {
     <Header title="Working with Rin" />
     <Intro email={contact.email} />
     <CardGrid>
-      <Card title="Stack" loading={loading}>
+      <Card title="Stack" key="stack" loading={loading}>
         <SkillList skills={response.technologies} />
       </Card>
-      <Card title="Languages" loading={loading}>
+      <Card title="Languages" key="languages" loading={loading}>
         <SkillList skills={response.languages} />
       </Card>
-      <Card title="Tools" loading={loading}>
+      <Card title="Tools" key="tools" loading={loading}>
         <SkillList skills={response.tools} />
       </Card>
-      <Card title="Interests" loading={loading}>
+      <Card title="Interests" key="interests" loading={loading}>
         {interests.map(({name}: InterestInterface) => (
-          <span>{name}</span>
+          <span key={name}>{name}</span>
         ))}
       </Card>
-      <Card type="checkboxes" title="Check your boxes">
+      <Card type="checkboxes" key="checkboxes" title="Check your boxes">
         <span>100% remote</span>
         <span>LGBTQI*-friendly<a title="Tell me more about it" href="https://www.theguardian.com/business/2019/apr/14/lgbt-friendly-business">[*]</a></span>
         <span>"Bring your whole self to work" culture<a title="Tell me more about it" href="https://www.forbes.com/sites/hennainam/2018/05/10/bring-your-whole-self-to-work/">[*]</a></span>
       </Card>
-      <Card type="list" title="Links" loading={loading}>
+      <Card type="list" key="links" title="Links" loading={loading}>
         {links.map(({title, type, url}: LinkInterface) => (
-           <Link type={type} url={url} label={title} />
+           <Link type={type} url={url} key={title} label={title} />
           ))}
        </Card>
     </CardGrid>

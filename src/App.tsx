@@ -40,6 +40,9 @@ const App = () => {
         ))}
       </Card>
       <CheckboxCard title="Wishlist" />
+      <Card title="Experience" fill>
+        Here goes my experience.
+      </Card>
       <Card title="Links" loading={loading}>
         {links.map(({title, type, url}: LinkInterface) => (
            <Link type={type} url={url} key={title} label={title} />

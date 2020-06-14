@@ -6,10 +6,11 @@ interface CardProps {
   title: string,
   children: ReactNode;
   loading?: boolean;
+  fill?: boolean;
 }
 
-const Card = ({title, children, loading = false}: CardProps) => (
-    <div className={`card list`}>
+const Card = ({title, children, loading = false, fill = false}: CardProps) => (
+    <div className={`card ${fill ? 'fill' : ''}`}>
       <h2 className='cardTitle'>{title}</h2>
       {loading ? (<LoadingSpinner />): (
         <ul>

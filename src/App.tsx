@@ -21,7 +21,7 @@ const App = () => {
 
   const { links, interests, contact } = response; 
   return (
-  <div className="darkTheme">
+  <div className="atlantaTheme">
     <Header title="Working with Rin" />
     <Intro email={contact.email} />
     <CardGrid>

@@ -35,24 +35,34 @@ $checkboxCheckedBackground: grey;
 
 
 $themes: (
-  light: (
+  atlanta: (
     backgroundColor: #fff,
     portraitBackgroundColor: #b6a1ce,
-    textColor: #408bbd,
-    buttonTextColor: #408bbd,
-    buttonTextTransform: none,
-    buttonTextHoverColor: #61b0e7,
-    buttonColor: #fff,
-    buttonBorder: 2px solid #fff,
+    cardBackground1: #ef476f,
+    cardBackground2: #ffd166,
+    cardBackground3:  #06d6a0,
+    cardBackground4:  #118ab2,
+    cardBackground5: #073b4c,
+    cardBackground6: #ef476f,
   ),
-  dark: (
-    backgroundColor: #383838,
-    portraitBackgroundColor: #b6a1ce,
-    textColor: #ddd,
-    buttonTextColor: #aaa,
-    buttonTextTransform: uppercase,
-    buttonTextHoverColor: #ddd,
-    buttonColor: #333,
-    buttonBorder: 1px solid #aaa,
+  serious: (
+    backgroundColor: #fff,
+    portraitBackgroundColor: #C5C5C5,
+    cardBackground1: #c6cfde,
+    cardBackground2: #ddd,
+    cardBackground3:  #c6cfde,
+    cardBackground4:  #ddd,
+    cardBackground5: #c6cfde,
+    cardBackground6: #ddd,
+  ),
+  soest: (
+    backgroundColor: #fff,
+    portraitBackgroundColor: #C5C5C5,
+    cardBackground1: #1a535c,
+    cardBackground2: #4ecdc4,
+    cardBackground3:  #f7fff7,
+    cardBackground4:  #ff6b6b,
+    cardBackground5: #ffe66d,
+    cardBackground6: #4ecdc4,
   ),
 );

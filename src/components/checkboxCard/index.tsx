@@ -8,6 +8,9 @@ interface CheckboxCardProps {
   loading?: boolean;
 }
 
+const LGBT_ARTICLE = "https://www.theguardian.com/business/2019/apr/14/lgbt-friendly-business";
+const WHOLE_SELF_ARTICLE = "https://www.forbes.com/sites/hennainam/2018/05/10/bring-your-whole-self-to-work/";
+
 const CheckboxCard = ({title, loading = false}: CheckboxCardProps) => {
   const [checkedCount, setCheckedCount] = useState(0);
 
@@ -21,18 +24,27 @@ const CheckboxCard = ({title, loading = false}: CheckboxCardProps) => {
       <>
         <ul className="checkboxes">
           <li>
-            <Checkbox id="1" onChange={handleChecked}><span>100% remote</span></Checkbox>
+            <Checkbox id="1" onChange={handleChecked}>
+              100% remote
+            </Checkbox>
           </li>
           <li>
-            <Checkbox id="2" onChange={handleChecked}><span>LGBTQI*-friendly<a title="Tell me more about it" href="https://www.theguardian.com/business/2019/apr/14/lgbt-friendly-business">[*]</a></span></Checkbox>
+            <Checkbox id="2" onChange={handleChecked}>
+              LGBTQI*-friendly
+                <a title="Tell me more about it" href={LGBT_ARTICLE}>[*]</a>
+            </Checkbox>
           </li>
           <li>
-            <Checkbox id="2" onChange={handleChecked}><span>"Bring your whole self to work" culture<a title="Tell me more about it" href="https://www.forbes.com/sites/hennainam/2018/05/10/bring-your-whole-self-to-work/">[*]</a></span></Checkbox>
+            <Checkbox id="3" onChange={handleChecked}>
+              "Bring your whole self to work" culture
+                <a title="Tell me more about it" href={WHOLE_SELF_ARTICLE}>[*]</a>
+            </Checkbox>
           </li>
         </ul>
-        {checkedCount === 1 && ("That's nice.")}
-        {checkedCount === 2 && ("That doesn't sound too bad.")}
-        {checkedCount === 3 && ("Excellent.")}
+        <div className="wishlist">
+          {new Array(checkedCount).fill("⭐️").map((e) => <span>{e}</span>)}
+          {checkedCount === 3 && ("Excellent.")}
+        </div>
       </>
     </Card>
   );

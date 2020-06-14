@@ -39,7 +39,7 @@ const App = () => {
           <span key={name}>{name}</span>
         ))}
       </Card>
-      <CheckboxCard title="Check your boxes" />
+      <CheckboxCard title="Wishlist" />
       <Card title="Links" loading={loading}>
         {links.map(({title, type, url}: LinkInterface) => (
            <Link type={type} url={url} key={title} label={title} />

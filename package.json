@@ -1,7 +1,12 @@
 {
   "name": "work-with-rin",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.9.0",
+  "description": "The backend to the 'Work With Rin' page.",
+  "main": "src/index.tsx",
+  "license": "MIT",
+  "author": "Rin Raeuber <mail@rin-raeuber.com>",
+  "homepage": "http://workwith.rin-raeuber.com/",
+  "repository": "github:rin/work-with-rin",
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
     "@testing-library/jest-dom": "^4.2.4",

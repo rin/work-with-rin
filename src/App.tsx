@@ -4,6 +4,7 @@ import Intro from './components/intro';
 import Card from './components/card';
 import CardGrid from './components/cardGrid';
 import SkillList from './components/skillList';
+import CheckboxCard from './components/checkboxCard';
 import Link from './components/link';
 import { useQuery } from "@apollo/react-hooks";
 import { LinkInterface, InterestInterface } from './types';
@@ -38,12 +39,7 @@ const App = () => {
           <span key={name}>{name}</span>
         ))}
       </Card>
-      <Card type="checkboxes" key="checkboxes" title="Check your boxes">
-        <span>100% remote</span>
-        <span>LGBTQI*-friendly<a title="Tell me more about it" href="https://www.theguardian.com/business/2019/apr/14/lgbt-friendly-business">[*]</a></span>
-        <span>"Bring your whole self to work" culture<a title="Tell me more about it" href="https://www.forbes.com/sites/hennainam/2018/05/10/bring-your-whole-self-to-work/">[*]</a></span>
-      </Card>
-      <Card type="list" key="links" title="Links" loading={loading}>
+      <CheckboxCard title="Check your boxes" />
       <Card title="Links" loading={loading}>
         {links.map(({title, type, url}: LinkInterface) => (
            <Link type={type} url={url} key={title} label={title} />

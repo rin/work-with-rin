@@ -1,0 +1,58 @@
+@import './themify.scss';
+
+$borderRadius: 3px;
+
+$titleFontFamily: 'Raleway', sans-serif;
+$bodyFontFamily: 'Raleway', sans-serif;
+$headerTitleFontFamily: 'Raleway', sans-serif;
+
+$cardTitleColor: white;
+$cardTitleBackgroundColor: rgba(0,0,0, 0.5);
+$cardTitleHoverBackgroundColor: rgba(0,0,0, 0.7);
+
+$progressBackgroundColor: rgba(255,255,255, 0.7);
+$progressColor:  rgba(0,0,0, 0.5);
+$progressHoverColor: yellow;
+
+$markColor: yellow;
+
+$cardBackground1: #ef476f;
+$cardBackground2: #ffd166;
+$cardBackground3:  #06d6a0;
+$cardBackground4:  #118ab2;
+$cardBackground5: #073b4c;
+$cardBackground6: #ef476f;
+
+// $cardBackground1: #d5f6ca;
+// $cardBackground2: #cadff6;
+// $cardBackground3:  #fee5fc;
+// $cardBackground4:  #ade6d9;
+// $cardBackground5: #e3deff;
+// $cardBackground6: #faffde;
+$checkboxBackground: white;
+$checkboxHoverBackground: #94949459;
+$checkboxCheckedBackground: grey;
+
+
+$themes: (
+  light: (
+    backgroundColor: #fff,
+    portraitBackgroundColor: #b6a1ce,
+    textColor: #408bbd,
+    buttonTextColor: #408bbd,
+    buttonTextTransform: none,
+    buttonTextHoverColor: #61b0e7,
+    buttonColor: #fff,
+    buttonBorder: 2px solid #fff,
+  ),
+  dark: (
+    backgroundColor: #383838,
+    portraitBackgroundColor: #b6a1ce,
+    textColor: #ddd,
+    buttonTextColor: #aaa,
+    buttonTextTransform: uppercase,
+    buttonTextHoverColor: #ddd,
+    buttonColor: #333,
+    buttonBorder: 1px solid #aaa,
+  ),
+);

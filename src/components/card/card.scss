@@ -1,4 +1,4 @@
-@import '../../global.scss';
+@import '../../themes/themes.scss';
 
 .card {
   display: inline-block;
@@ -31,27 +31,27 @@
     }
   }
   &:nth-of-type(1) {
-    background: $pastelBackground1;
+    background: $cardBackground1;
   }
   
   &:nth-of-type(2) {
-    background: $pastelBackground2;
+    background: $cardBackground2;
   }
   
   &:nth-of-type(3) {
-    background: $pastelBackground3;
+    background: $cardBackground3;
   }
   
   &:nth-of-type(4) {
-    background: $pastelBackground4;
+    background: $cardBackground4;
   }
   
   &:nth-of-type(5) {
-    background: $pastelBackground5;
+    background: $cardBackground5;
   }
   
   &:nth-of-type(6) {
-    background: $pastelBackground6;
+    background: $cardBackground6;
   }  
 }
 

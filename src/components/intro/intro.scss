@@ -1,4 +1,4 @@
-@import '../../global.scss';
+@import '../../themes/themes.scss';
 
 .introWrapper {
   display: flex;
@@ -14,7 +14,7 @@
   width: 100%;
   margin-left: 1em;
   padding: 1em;
-  background: #fae9c2;
+  background: #f3eee4;
   p {
     max-width: 30em;
     line-height: 1.5;

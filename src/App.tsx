@@ -24,16 +24,16 @@ const App = () => {
     <Header title="Working with Rin" />
     <Intro email={contact.email} />
     <CardGrid>
-      <Card title="Stack" key="stack" loading={loading}>
+      <Card title="Stack" loading={loading}>
         <SkillList skills={response.technologies} />
       </Card>
-      <Card title="Languages" key="languages" loading={loading}>
+      <Card title="Languages" loading={loading}>
         <SkillList skills={response.languages} />
       </Card>
-      <Card title="Tools" key="tools" loading={loading}>
+      <Card title="Tools" loading={loading}>
         <SkillList skills={response.tools} />
       </Card>
-      <Card title="Interests" key="interests" loading={loading}>
+      <Card title="Interests" loading={loading}>
         {interests.map(({name}: InterestInterface) => (
           <span key={name}>{name}</span>
         ))}
@@ -44,6 +44,7 @@ const App = () => {
         <span>"Bring your whole self to work" culture<a title="Tell me more about it" href="https://www.forbes.com/sites/hennainam/2018/05/10/bring-your-whole-self-to-work/">[*]</a></span>
       </Card>
       <Card type="list" key="links" title="Links" loading={loading}>
+      <Card title="Links" loading={loading}>
         {links.map(({title, type, url}: LinkInterface) => (
            <Link type={type} url={url} key={title} label={title} />
           ))}

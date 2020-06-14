@@ -6,7 +6,7 @@ import { SkillInterface, SkillListInterface } from '../../types';
 const SkillList = ({ skills } : SkillListInterface) => (
   <>
     {skills.map(({name, rating, marked}: SkillInterface) => (
-      <span>
+      <span key={name}>
         {marked ? (
           <mark>{name}</mark>
         ):(

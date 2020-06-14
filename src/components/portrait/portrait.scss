@@ -1,11 +1,21 @@
 @import '../../themes/themes.scss';
 
-.portrait {
-  max-width: 18em;
-  border-radius: 5px;
+.portraitWrapper {
+  position: relative;
+  width: 12em;
+  border-radius: $borderRadius;
   @include themify($themes) { 
     background-color: themed('portraitBackgroundColor');  
   }
+}
+
+.portrait {
+  max-width: 12em;
+  border-radius: $borderRadius;
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .colorPickerTrigger, .colorPickerTrigger:focus {

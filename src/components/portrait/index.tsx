@@ -17,7 +17,7 @@ const Portrait = () => {
   };
 
   return (
-    <div>
+    <div className="portraitWrapper" style={{ background }} >
       {colorPickerDisplayed && (
         <ColorPicker
           colors={COLORS} 
@@ -29,11 +29,10 @@ const Portrait = () => {
         className="colorPickerTrigger" 
         onClick={showColorPicker}
       >
-        ✎ Change Background
+        ✎ Change Color
       </button>
       <img 
         src='/rin-cv-portrait.png' 
-        style={{ background }} 
         className='portrait' 
         alt="Portrait" 
       />

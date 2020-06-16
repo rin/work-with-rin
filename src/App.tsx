@@ -34,7 +34,7 @@ const App = () => {
       <Card title="Tools" loading={loading}>
         <SkillList skills={response.tools} />
       </Card>
-      <Card title="Interests" loading={loading}>
+      <Card title="Interests" className='interestsCard' loading={loading}>
         {interests.map(({name}: InterestInterface) => (
           <span key={name}>{name}</span>
         ))}

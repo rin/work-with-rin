@@ -2,6 +2,7 @@
 
 body {
   width: 100%;
+  margin: 0;
 }
 
 mark {
@@ -32,6 +33,14 @@ mark {
     width: 100%;
     left: 0;
     transform: rotate(0deg) translatey(0em);
+  }
+}
+
+.interestsCard ul {
+  list-style-type: square;
+  margin: 0 1em;
+  li {
+    line-height: 1.5em;
   }
 }
 

@@ -37,7 +37,7 @@ const CheckboxCard = ({title, loading = false}: CheckboxCardProps) => {
           <li>
             <Checkbox id="3" onChange={handleChecked}>
               <span>
-                with social impact
+                w/ social impact
               </span>
             </Checkbox>
           </li>

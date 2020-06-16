@@ -3,14 +3,15 @@ import LoadingSpinner from '../loadingSpinner';
 import './card.scss';
 
 interface CardProps {
-  title: string,
+  title: string;
   children: ReactNode;
   loading?: boolean;
   fill?: boolean;
+  className?: string;
 }
 
-const Card = ({title, children, loading = false, fill = false}: CardProps) => (
-    <div className={`card ${fill ? 'fill' : ''}`}>
+const Card = ({title, children, loading = false, fill = false, className = ''}: CardProps) => (
+    <div className={`card ${fill ? 'fill' : ''}${className}`}>
       <h2 className='cardTitle'>{title}</h2>
       {loading ? (<LoadingSpinner />): (
         <ul>

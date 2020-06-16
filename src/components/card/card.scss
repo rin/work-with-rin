@@ -86,6 +86,13 @@
     @include themify($themes) { 
       background-color: themed('cardBackground6');  
     }
+  } 
+
+  &:nth-of-type(7) {
+    background: $cardBackground7;
+    @include themify($themes) { 
+      background-color: themed('cardBackground7');  
+    }
   }  
 }
 

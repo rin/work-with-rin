@@ -20,18 +20,13 @@ $cardBackground1: #ef476f;
 $cardBackground2: #ffd166;
 $cardBackground3:  #06d6a0;
 $cardBackground4:  #118ab2;
-$cardBackground5: #073b4c;
-$cardBackground6: #ef476f;
+$cardBackground5: #afaead;
+$cardBackground6: #ffd166;
+$cardBackground7: #06d6a0;
 
-// $cardBackground1: #d5f6ca;
-// $cardBackground2: #cadff6;
-// $cardBackground3:  #fee5fc;
-// $cardBackground4:  #ade6d9;
-// $cardBackground5: #e3deff;
-// $cardBackground6: #faffde;
 $checkboxBackground: white;
-$checkboxHoverBackground: #94949459;
-$checkboxCheckedBackground: grey;
+$checkboxHoverBackground: #ffd166;
+$checkboxCheckedBackground: #06d6a0;
 
 
 $themes: (
@@ -42,8 +37,12 @@ $themes: (
     cardBackground2: #ffd166,
     cardBackground3:  #06d6a0,
     cardBackground4:  #118ab2,
-    cardBackground5: #073b4c,
-    cardBackground6: #ef476f,
+    cardBackground5: #afaead,
+    cardBackground6: #ffd166,
+    cardBackground7: #06d6a0,
+    checkboxBackground: white,
+    checkboxHoverBackground: #ffd166,
+    checkboxCheckedBackground: #06d6a0,
   ),
   serious: (
     backgroundColor: #fff,
@@ -54,6 +53,11 @@ $themes: (
     cardBackground4:  #ddd,
     cardBackground5: #c6cfde,
     cardBackground6: #ddd,
+    cardBackground7:  #c6cfde,
+    checkboxBackground: white,
+    checkboxHoverBackground: #ddd,
+    checkboxCheckedBackground: #aaa,
+
   ),
   soest: (
     backgroundColor: #fff,
@@ -64,5 +68,6 @@ $themes: (
     cardBackground4:  #ff6b6b,
     cardBackground5: #ffe66d,
     cardBackground6: #4ecdc4,
+    cardBackground7:  #f7fff7,
   ),
 );

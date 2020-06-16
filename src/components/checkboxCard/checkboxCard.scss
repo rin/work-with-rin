@@ -1,24 +1,14 @@
 ul.checkboxes {
   list-style-type: none;
-  padding-left: .5em;
+  padding-left: 0;
+  padding-right: 1em;
 }
 
-.card .wishlist {
+.card .stars {
   height: 2em;
-  span {
+  margin: 0 2em 0 0;
+  text-align: center;
+  span.star {
     display: inline-block;
-    animation: rotate 2s ease-in-out infinite;
-    animation-direction: alternate-reverse;
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: scale(1);
-    transform-origin: center center;
-  }
-  to {
-    transform: scale(0.6);
-    transform-origin: center center;
   }
 }

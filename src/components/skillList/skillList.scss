@@ -1,0 +1,9 @@
+@import '../../themes/themes.scss';
+
+.skill:hover {
+  cursor: pointer;
+  .progress {
+    background-color: $progressHoverColor;
+  }
+  
+}

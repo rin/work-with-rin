@@ -28,6 +28,8 @@ $checkboxBackground: white;
 $checkboxHoverBackground: #ffd166;
 $checkboxCheckedBackground: #06d6a0;
 
+$timezoneBottomColor: rgba(0, 255, 0, 0.6);
+$timezoneTopColor: rgba(0, 0, 255, 0.6);
 
 $themes: (
   atlanta: (
@@ -46,6 +48,9 @@ $themes: (
     checkboxHoverBackground: #ffd166,
     checkboxCheckedBackground: #06d6a0,
     headerTitleColor: #131319,
+    markColor: yellow,
+    timezoneBottomColor: #06d6a0,
+    timezoneTopColor: #ef476f,
   ),
   serious: (
     backgroundColor: #fff,
@@ -64,6 +69,9 @@ $themes: (
     checkboxHoverBackground: #ddd,
     checkboxCheckedBackground: #aaa,
     headerTitleColor: black,
+    markColor: yellow,
+    timezoneBottomColor: #4d4d9c,
+    timezoneTopColor:#397339,
 
   ),
   monokai: (
@@ -79,6 +87,9 @@ $themes: (
     cardBackground6: #78dce8,
     cardBackground7:  #a9dc76,
     headerTitleColor: #ab9df2,
+    markColor: yellow,
+    timezoneBottomColor: #a9dc76,
+    timezoneTopColor: #ab9df2,
   ),
   dracula: (
     backgroundColor: #282a36,
@@ -94,5 +105,8 @@ $themes: (
     cardBackground6: #ff5555,
     cardBackground7: #f1fa8c,
     headerTitleColor:#ffb86c,
+    markColor: yellow,
+    timezoneBottomColor: #8be9fd,
+    timezoneTopColor: #50fa7b,
   ),
 );

@@ -32,6 +32,11 @@
       width: 100%;
     }
   }
+  &.fullWidth {
+    margin: 0.75em;
+    width: -webkit-fill-available;
+    width: fill-available;
+  }
   
 
   a {
@@ -99,12 +104,19 @@
 .cardTitle {
   font-family: $titleFontFamily;
   margin-top: 0;
-  background-color: $cardTitleBackgroundColor;
+  background: $cardTitleBackgroundColor;
   color: $cardTitleColor;
+  @include themify($themes) { 
+    background-color: themed('cardTitleBackgroundColor'); 
+    color: themed('cardTitleColor'); 
+  }
   padding: 0.5em;
   border-radius: $borderRadius;
   &:hover {
     background-color: $cardTitleHoverBackgroundColor;
+    @include themify($themes) { 
+      background-color: themed('cardTitleBackgroundHoverColor'); 
+    }
   }
 }
 

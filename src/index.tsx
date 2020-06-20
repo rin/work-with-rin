@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
+import ThemeContext from './themes/themeContext';
 
-const API_URL = "https://workwithrin.herokuapp.com/api/";
+// const API_URL = "http://workwithrin.herokuapp.com/api/";
+const API_URL = "http://localhost:4000/api/";
 
 const client = new ApolloClient({ uri: API_URL });
 
 ReactDOM.render(
   <ApolloProvider client={client}>
     <React.StrictMode>
-      <App />
+      <App/>
     </React.StrictMode>
   </ApolloProvider>,
   document.getElementById('root')

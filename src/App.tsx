@@ -9,9 +9,15 @@ import Link from './components/link';
 import { useQuery } from "@apollo/react-hooks";
 import { LinkInterface, InterestInterface } from './types';
 import { loader } from 'graphql.macro';
+import ThemeSelector from './components/themeSelector';
+import ThemeContext from './themes/themeContext';
 import './App.scss';
 
+const DEFAULT_THEME = 'atlanta';
+
 const App = () => {
+  const [theme, setTheme] = useState<string>(DEFAULT_THEME);
+  const value = { theme: theme, setTheme: setTheme};
   const query = loader('./query.graphql');
   const { loading, error } = useQuery(query, { onCompleted: (data) => {
     setResponse(data);
@@ -21,7 +27,10 @@ const App = () => {
 
   const { links, interests, contact } = response; 
   return (
-  <div className="atlantaTheme">
+    <ThemeContext.Provider value={value}>
+      <div className={`${theme}Theme`}>
+        <div className="wrapper">
+      <ThemeSelector />
     <Header title="Working with Rin" />
     <Intro email={contact.email} />
     <CardGrid>
@@ -49,7 +58,9 @@ const App = () => {
           ))}
        </Card>
     </CardGrid>
+    </div>
   </div>
+  </ThemeContext.Provider>
   )
 }
 

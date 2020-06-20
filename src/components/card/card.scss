@@ -1,5 +1,26 @@
 @import '../../themes/themes.scss';
 
+
+.cardTitle {
+  font-family: $titleFontFamily;
+  text-transform: capitalize;
+  margin-top: 0;
+  background: $cardTitleBackgroundColor;
+  color: $cardTitleColor;
+  @include themify($themes) { 
+    background-color: themed('cardTitleBackgroundColor'); 
+    color: themed('cardTitleColor'); 
+  }
+  padding: 0.5em;
+  border-radius: $borderRadius;
+  &:hover {
+    background-color: $cardTitleHoverBackgroundColor;
+    @include themify($themes) { 
+      background-color: themed('cardTitleBackgroundHoverColor'); 
+    }
+  }
+}
+
 .card {
   display: inline-block;
   min-height: 14em;
@@ -99,25 +120,6 @@
       background-color: themed('cardBackground7');  
     }
   }  
-}
-
-.cardTitle {
-  font-family: $titleFontFamily;
-  margin-top: 0;
-  background: $cardTitleBackgroundColor;
-  color: $cardTitleColor;
-  @include themify($themes) { 
-    background-color: themed('cardTitleBackgroundColor'); 
-    color: themed('cardTitleColor'); 
-  }
-  padding: 0.5em;
-  border-radius: $borderRadius;
-  &:hover {
-    background-color: $cardTitleHoverBackgroundColor;
-    @include themify($themes) { 
-      background-color: themed('cardTitleBackgroundHoverColor'); 
-    }
-  }
 }
 
 

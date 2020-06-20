@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import ThemeContext from '../../themes/themeContext';
 import './themeSelector.scss';
 
-const THEMES = ['atlanta', 'serious', 'soest', 'dracula'];
+const THEMES = ['atlanta', 'serious', 'monokai', 'dracula'];
 
 const ThemeSelector = () => {
   const { theme, setTheme } = useContext(ThemeContext);

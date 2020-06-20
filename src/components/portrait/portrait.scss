@@ -6,6 +6,8 @@
   border-radius: $borderRadius;
   @include themify($themes) { 
     background-color: themed('portraitBackgroundColor');  
+    background: themed('portraitBackground');
+    background-size: cover;
   }
 }
 
@@ -16,16 +18,4 @@
   max-width: 100%;
   position: absolute;
   bottom: 0;
-}
-
-.colorPickerTrigger, .colorPickerTrigger:focus {
-  position: absolute;
-  color: white;
-  background: rgba(138, 138, 138, 0.6);
-  border: none;
-  border-radius: $borderRadius;
-  outline: none;
-  text-transform: uppercase;
-  font-size: 0.7em;
-  cursor: pointer;
 }

@@ -40,11 +40,12 @@
   }
   &.fill {
     flex: auto;
-    margin: 0 .75em;
+    margin: 0 0.75em 1em 0.75em;
     @media only screen and (max-width: 800px) {
       width: 100%;
       margin: 0;
       margin-bottom: 1em;
+      order: 2;
     }
     @media only screen and (max-width: 700px) {
       width: 100%;
@@ -54,7 +55,7 @@
     }
   }
   &.fullWidth {
-    margin: 0.75em;
+    margin: 0 1em;
     width: -webkit-fill-available;
     width: fill-available;
   }
@@ -121,5 +122,3 @@
     }
   }  
 }
-
-

@@ -2,30 +2,28 @@ import React from 'react';
 import './timezones.scss';
 import classNames from 'classnames';
 
-
-const HOURS = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23, 0];
-
 const zeroPad = (num: Number) => `${num}`.length < 2 ? `0${num}` : `${num}`;
 
 const offsetFromUTC = new Date().getTimezoneOffset()/60;
 const localTimezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
 interface Hours {
-  label: string;
-  start: Number;
-  end: Number;
+  label?: string;
+  start?: Number;
+  end?: Number;
 }
 
-interface TimezonesProps { hours: [Hours, Hours] };
+interface TimezonesProps { topHours: Hours, bottomHours: Hours };
 
-const Timezones = ({hours: [topHours, bottomHours]} : TimezonesProps) => {
+const Timezones = ({topHours, bottomHours} : TimezonesProps) => {
+  if (!topHours && !bottomHours) return null;
   const generateDay = () => {
     const hoursOfADay = [];
     for (let i = 1; i < 24; i++) hoursOfADay.push(i);
     hoursOfADay.push(0); // midnight
     return hoursOfADay;
   };
-  const hourIsWithin = (time : Number, { start, end }: Hours) => time >= start && time <= end;
+  const hourIsWithin = (time : Number, { start = 0, end = 0 }: Hours) => time >= start && time <= end;
 
   return (
     <div className="timezones">

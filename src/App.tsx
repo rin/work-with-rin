@@ -16,6 +16,16 @@ import './App.scss';
 
 const DEFAULT_THEME = 'atlanta';
 
+const EMPTY_RESPONSE = {
+  languages: [], 
+  hours: [], 
+  technologies: [], 
+  tools: [], 
+  links: [], 
+  interests: [], 
+  contact: { email: ''}
+};
+
 const App = () => {
   const [theme, setTheme] = useState<string>(DEFAULT_THEME);
   const value = { theme: theme, setTheme: setTheme};
@@ -23,21 +33,10 @@ const App = () => {
   const { loading, error } = useQuery(query, { onCompleted: (data) => {
     setResponse(data);
   }});
-  const [response, setResponse] = useState({languages: [], technologies: [], tools: [], links: [], interests: [], contact: { email: ''}});
+  const [response, setResponse] = useState(EMPTY_RESPONSE);
   if (error) return <p>There's an error: {error.message}</p>;
 
-  const hours = [{
-    label: "November to May",
-    start: 1,
-    end: 10,
-  },
-  {
-    label: "April to October",
-    start: 6,
-    end: 15,
-  }];
-
-  const { links, interests, contact } = response; 
+  const { links, interests, contact, hours } = response; 
   return (
     <ThemeContext.Provider value={value}>
       <div className={`${theme}Theme`}>
@@ -75,7 +74,7 @@ const App = () => {
         </Card>
       </CardGrid>
       <Card title="My favorite working hours" fullWidth>
-        <Timezones hours={[hours[0], hours[1]]} />
+        <Timezones topHours={hours[0]} bottomHours={hours[1]} />
       </Card>
     </div>
     </div>

@@ -22,6 +22,11 @@
     interests {
       name
     }
+    hours {
+      label
+      start
+      end
+    }
     contact {
       email
     }

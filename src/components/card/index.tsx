@@ -14,15 +14,7 @@ interface CardProps {
 const Card = ({title, children, loading = false, fill = false, fullWidth = false, className = ''}: CardProps) => (
     <div className={`card ${fill ? 'fill' : ''}${fullWidth ? 'fullWidth' : ''}${className}`}>
       <h2 className='cardTitle'>{title}</h2>
-      {loading ? (<LoadingSpinner />): (
-        <ul>
-          {Children.toArray(children).map((element, index) => (
-            <li key={index}>
-              {element}
-            </li>
-          ))}
-        </ul>
-      )}
+      {loading ? (<LoadingSpinner />): (children)}
     </div>
   );
 

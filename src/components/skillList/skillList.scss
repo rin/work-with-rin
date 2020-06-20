@@ -4,6 +4,9 @@
   cursor: pointer;
   .progress {
     background-color: $progressHoverColor;
+    @include themify($themes) { 
+      background-color: themed('progressHoverColor'); 
+    }
   }
   
 }

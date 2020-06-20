@@ -4,18 +4,18 @@ import { SkillInterface, SkillListInterface } from '../../types';
 import './skillList.scss';
 
 const SkillList = ({ skills } : SkillListInterface) => (
-  <>
+  <ul>
     {skills.map(({name, rating, marked}: SkillInterface) => (
-      <span className="skill" key={name}>
+      <li className="skill" key={name}>
         {marked ? (
           <mark>{name}</mark>
         ):(
           <>{name}</>
         )}
         <Rating percentage={rating} />
-      </span>
+      </li>
     ))}
-  </>
+  </ul>
 )
 
 

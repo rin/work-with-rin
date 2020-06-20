@@ -44,18 +44,22 @@ const App = () => {
         <SkillList skills={response.tools} />
       </Card>
       <Card title="Interests" className='interestsCard' loading={loading}>
+          <ul>
         {interests.map(({name}: InterestInterface) => (
-          <span key={name}>{name}</span>
+              <li><span key={name}>{name}</span></li>
         ))}
+          </ul>
       </Card>
       <CheckboxCard title="Wishlist" />
       <Card title="Experience" fill>
         Here goes my experience.
       </Card>
       <Card title="Links" loading={loading}>
+          <ul>
         {links.map(({title, type, url}: LinkInterface) => (
-           <Link type={type} url={url} key={title} label={title} />
+              <li><Link type={type} url={url} key={title} label={title} /></li>
           ))}
+          </ul>
        </Card>
     </CardGrid>
     </div>

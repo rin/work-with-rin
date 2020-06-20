@@ -26,6 +26,17 @@ const App = () => {
   const [response, setResponse] = useState({languages: [], technologies: [], tools: [], links: [], interests: [], contact: { email: ''}});
   if (error) return <p>There's an error: {error.message}</p>;
 
+  const hours = [{
+    label: "November to May",
+    start: 1,
+    end: 10,
+  },
+  {
+    label: "April to October",
+    start: 6,
+    end: 15,
+  }];
+
   const { links, interests, contact } = response; 
   return (
     <ThemeContext.Provider value={value}>
@@ -64,7 +75,7 @@ const App = () => {
         </Card>
       </CardGrid>
       <Card title="My favorite working hours" fullWidth>
-        <Timezones />
+        <Timezones hours={[hours[0], hours[1]]} />
       </Card>
     </div>
     </div>

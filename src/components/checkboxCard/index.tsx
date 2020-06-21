@@ -43,7 +43,7 @@ const CheckboxCard = ({title, loading = false}: CheckboxCardProps) => {
           </li>
         </ul>
         <div className="stars">
-          {new Array(checkedCount).fill("⭐️").map((e) => 
+          {new Array(checkedCount).fill("☆").map((e) => 
             <span className="star">{e}</span>)
           }
         </div>

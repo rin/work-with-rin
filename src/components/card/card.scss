@@ -31,6 +31,7 @@
   margin-bottom: 1em;
   font-family: $bodyFontFamily;
   width: 24%;
+  padding-bottom: 1.5em;
   @media only screen and (max-width: 800px) {
     width: 32%;
   }
@@ -57,10 +58,11 @@
     }
   }
   &.fullWidth {
-    margin: 0 1em;
+    margin: 0 1em 1em 1em;
     width: -webkit-fill-available;
     width: -moz-available;
     width: stretch;
+    min-height: 0;
   }
   
 

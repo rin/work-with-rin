@@ -1,13 +1,19 @@
 ul.checkboxes {
   list-style-type: none;
   padding-right: 1em;
+  li {
+    line-height: 3em;
+  }
 }
 
 .card .stars {
-  height: 2em;
-  margin: 0 2em 0 0;
   text-align: center;
+  height: 3em;
+  padding-bottom: 1em;
   span.star {
     display: inline-block;
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 0.1em;
   }
 }

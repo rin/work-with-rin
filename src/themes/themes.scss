@@ -6,6 +6,8 @@ $titleFontFamily: 'Raleway', sans-serif;
 $bodyFontFamily: 'Raleway', sans-serif;
 $headerTitleFontFamily: 'Raleway', sans-serif;
 
+$introBackground: #f3eee4;
+
 $cardTitleColor: white;
 $cardTitleBackgroundColor: rgba(0,0,0, 0.5);
 $cardTitleHoverBackgroundColor: rgba(0,0,0, 0.7);
@@ -51,6 +53,7 @@ $themes: (
     markColor: yellow,
     timezoneBottomColor: #06d6a0,
     timezoneTopColor: #ef476f,
+    introBackground: #f3eee4,
   ),
   serious: (
     backgroundColor: #fff,
@@ -65,14 +68,14 @@ $themes: (
     cardBackground5: #c6cfde,
     cardBackground6: #ddd,
     cardBackground7:  #c6cfde,
-    checkboxBackground: white,
-    checkboxHoverBackground: #ddd,
-    checkboxCheckedBackground: #aaa,
     headerTitleColor: black,
     markColor: yellow,
     timezoneBottomColor: #4d4d9c,
     timezoneTopColor:#397339,
-
+    checkboxBackground: white,
+    checkboxHoverBackground: #ddd,
+    checkboxCheckedBackground: #aaa,
+    introBackground: #ededed,
   ),
   monokai: (
     backgroundColor: #38220f,
@@ -90,6 +93,10 @@ $themes: (
     markColor: yellow,
     timezoneBottomColor: #a9dc76,
     timezoneTopColor: #ab9df2,
+    checkboxBackground: white,
+    checkboxHoverBackground: #ab9df2,
+    checkboxCheckedBackground: #a9dc76,
+    introBackground: #fff,
   ),
   dracula: (
     backgroundColor: #282a36,
@@ -108,5 +115,9 @@ $themes: (
     markColor: yellow,
     timezoneBottomColor: #8be9fd,
     timezoneTopColor: #50fa7b,
+    checkboxBackground: white,
+    checkboxHoverBackground: #ffb86c,
+    checkboxCheckedBackground: #50fa7b,
+    introBackground: #fff,
   ),
 );

@@ -19,13 +19,19 @@
     vertical-align: text-top;
     width: 20px;
     height: 20px;
-    background: $checkboxBackground;
     border: 1px solid grey;
     border-radius: $borderRadius;
+    background: $checkboxBackground;
+    @include themify($themes) { 
+      background: themed('checkboxBackground');  
+    }
   }
   
   &:hover + label:before {
     background: $checkboxHoverBackground;
+    @include themify($themes) { 
+      background: themed('checkboxHoverBackground');  
+    }
   }
     
   &:focus + label:before {
@@ -34,6 +40,9 @@
   
   &:checked + label:before {
     background: $checkboxCheckedBackground;
+    @include themify($themes) { 
+      background: themed('checkboxCheckedBackground');  
+    }
   }
   
   &:checked + label:after {
@@ -41,7 +50,6 @@
     position: absolute;
     left: 5px;
     top: 9px;
-    background: $checkboxBackground;
     width: 2px;
     height: 2px;
     box-shadow: 
@@ -52,6 +60,17 @@
       4px -6px 0 $checkboxBackground,
       4px -8px 0 $checkboxBackground;
     transform: rotate(45deg);
+    background: $checkboxBackground;
+    @include themify($themes) { 
+      background: themed('checkboxBackground');
+      box-shadow: 
+      2px 0 0 themed('checkboxBackground'),
+      4px 0 0 themed('checkboxBackground'),
+      4px -2px 0 themed('checkboxBackground'),
+      4px -4px 0 themed('checkboxBackground'),
+      4px -6px 0 themed('checkboxBackground'),
+      4px -8px 0 themed('checkboxBackground');
+    }
   }
 }
 

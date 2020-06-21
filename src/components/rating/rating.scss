@@ -14,4 +14,9 @@
   height: .75em;
   padding: 0;
   margin: 0;
+  animation: growProgress 1s linear;
+}
+
+@keyframes growProgress {
+  0% { width: 0; }
 }

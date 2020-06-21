@@ -22,6 +22,14 @@
     interests {
       name
     }
+    experience {
+    title
+    start
+    end
+    organisation
+    link
+    description
+    }
     hours {
       label
       start

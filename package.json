@@ -21,8 +21,10 @@
     "classnames": "^2.2.6",
     "graphql": "^15.1.0",
     "graphql.macro": "^1.4.2",
+    "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-collapsible": "^2.8.0",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2"

@@ -7,6 +7,7 @@ import SkillList from './components/skillList';
 import CheckboxCard from './components/checkboxCard';
 import Link from './components/link';
 import Timezones from './components/timezones';
+import Experience from './components/experience';
 import { useQuery } from "@apollo/react-hooks";
 import { LinkInterface, InterestInterface } from './types';
 import { loader } from 'graphql.macro';
@@ -23,6 +24,14 @@ const EMPTY_RESPONSE = {
   tools: [], 
   links: [], 
   interests: [], 
+  experience: [{
+    title: '',
+    start: '',
+    end: '',
+    link: '',
+    organisation: '',
+    description: '',
+  }],
   contact: { email: ''}
 };
 
@@ -36,7 +45,7 @@ const App = () => {
   const [response, setResponse] = useState(EMPTY_RESPONSE);
   if (error) return <p>There's an error: {error.message}</p>;
 
-  const { links, interests, contact, hours } = response; 
+  const { links, interests, contact, hours, experience } = response; 
   return (
     <ThemeContext.Provider value={value}>
       <div className={`${theme}Theme`}>
@@ -63,7 +72,7 @@ const App = () => {
         </Card>
         <CheckboxCard title="Wishlist" />
         <Card title="Experience" fill>
-          Here goes my experience.
+          <Experience items={experience} />
         </Card>
         <Card title="Links" loading={loading}>
           <ul>

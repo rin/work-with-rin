@@ -1,0 +1,25 @@
+.experience li {
+  margin-bottom: 1em;
+}
+
+.experienceTitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.is-closed .experienceTitle:after {
+  content: "+";
+  font-family: Helvetica, Arial;
+  margin-left: .5em;
+}
+.is-open .experienceTitle:after {
+  content: "-";
+  margin-left: .5em;
+  font-family: Helvetica, Arial;
+}
+
+.experienceOrg a {
+  text-decoration: none;
+  margin-left: .5em;
+}

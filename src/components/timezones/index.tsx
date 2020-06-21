@@ -36,7 +36,7 @@ const Timezones = ({topHours, bottomHours} : TimezonesProps) => {
     </ul>
     <div>
       {generateDay().map((hour) => (
-        <>
+        <span key={hour}>
           <div 
             className={classNames('hour', 
               { markedOnTop: hourIsWithin(hour + offsetFromUTC, topHours) }, 
@@ -45,7 +45,7 @@ const Timezones = ({topHours, bottomHours} : TimezonesProps) => {
             key={hour}>
           </div>
           <div className="label">{zeroPad(hour)}</div>
-        </>
+        </span>
       ))}
     </div>
   </div>

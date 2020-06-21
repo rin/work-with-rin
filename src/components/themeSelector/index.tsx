@@ -12,6 +12,7 @@ const ThemeSelector = () => {
       ✎ Choose Theme
       {THEMES.map((themeName) => (
         <button 
+          key={themeName}
           onClick={() => setTheme(themeName)}
           className={`theme ${theme === themeName ? 'active' : ''}`}
         >

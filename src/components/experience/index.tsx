@@ -27,7 +27,7 @@ const Experience = ({ items }: ExperienceProps) => {
   return (
     <ul className="experience">
       {items.map((experience: ExperienceItem) => (
-        <li>
+        <li key={experience.title}>
           <span className="experienceDate">
             {formatDateAsMonthYear(experience.start)} - {formatDateAsMonthYear(experience.end)}
           </span>

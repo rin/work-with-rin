@@ -50,42 +50,44 @@ const App = () => {
     <ThemeContext.Provider value={value}>
       <div className={`${theme}Theme`}>
         <div className="wrapper">
-      <ThemeSelector />
-      <Header title="Working with Rin" />
-      <Intro email={contact.email} />
-      <CardGrid>
-        <Card title="Stack" loading={loading}>
-          <SkillList skills={response.technologies} />
-        </Card>
-        <Card title="Languages" loading={loading}>
-          <SkillList skills={response.languages} />
-        </Card>
-        <Card title="Tools" loading={loading}>
-          <SkillList skills={response.tools} />
-        </Card>
-        <Card title="Interests" className='interestsCard' loading={loading}>
-          <ul>
-            {interests.map(({name}: InterestInterface) => (
-              <li><span key={name}>{name}</span></li>
-            ))}
-          </ul>
-        </Card>
-        <CheckboxCard title="Wishlist" />
-        <Card title="Experience" fill>
-          <Experience items={experience} />
-        </Card>
-        <Card title="Links" loading={loading}>
-          <ul>
-            {links.map(({title, type, url}: LinkInterface) => (
-              <li><Link type={type} url={url} key={title} label={title} /></li>
-              ))}
-          </ul>
-        </Card>
-      </CardGrid>
-      <Card title="My favorite working hours" fullWidth>
-        <Timezones topHours={hours[0]} bottomHours={hours[1]} />
-      </Card>
-    </div>
+          <ThemeSelector />
+          <Header title="Working with Rin" />
+          <Intro email={contact.email} />
+          <CardGrid>
+            <Card title="Stack" loading={loading}>
+              <SkillList skills={response.technologies} />
+            </Card>
+            <Card title="Languages" loading={loading}>
+              <SkillList skills={response.languages} />
+            </Card>
+            <Card title="Tools" loading={loading}>
+              <SkillList skills={response.tools} />
+            </Card>
+            <Card title="Interests" className='interestsCard' loading={loading}>
+              <ul>
+                {interests.map(({name}: InterestInterface) => (
+                  <li key={name}><span key={name}>{name}</span></li>
+                ))}
+              </ul>
+            </Card>
+            <CheckboxCard title="Wishlist" />
+            <Card title="Experience" fill>
+              <Experience items={experience} />
+            </Card>
+            <Card title="Links" loading={loading}>
+              <ul>
+                {links.map(({title, type, url}: LinkInterface) => (
+                  <li key={title}>
+                    <Link type={type} url={url} key={title} label={title} />
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          </CardGrid>
+          <Card title="My favorite working hours" fullWidth>
+            <Timezones topHours={hours[0]} bottomHours={hours[1]} />
+          </Card>
+        </div>
     </div>
   </ThemeContext.Provider>
   )

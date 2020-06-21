@@ -57,7 +57,8 @@
   &.fullWidth {
     margin: 0 1em;
     width: -webkit-fill-available;
-    width: fill-available;
+    width: -moz-available;
+    width: stretch;
   }
   
 

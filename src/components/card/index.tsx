@@ -1,4 +1,4 @@
-import React, { ReactNode, Children } from 'react';
+import React, { ReactNode } from 'react';
 import LoadingSpinner from '../loadingSpinner';
 import './card.scss';
 

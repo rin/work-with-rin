@@ -35,4 +35,4 @@ yarn test
 ```
 
 ## Check it out
-[http://workwith.rin.li/](http://workwith.rin.li/)
+[http://workwith.rinrae.com/](http://workwith.rinrae.com/)

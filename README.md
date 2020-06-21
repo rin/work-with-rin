@@ -35,4 +35,4 @@ yarn test
 ```
 
 ## Check it out
-(This is not deployed yet. Will add the link when it is.)
+[http://workwith.rin.li/](http://workwith.rin.li/)

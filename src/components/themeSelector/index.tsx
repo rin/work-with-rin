@@ -9,7 +9,7 @@ const ThemeSelector = () => {
 
   return (
     <div className='themeSelector'>
-      ✎ Choose Theme
+      ✎ Theme
       {THEMES.map((themeName) => (
         <button 
           key={themeName}

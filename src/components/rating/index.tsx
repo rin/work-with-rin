@@ -2,12 +2,12 @@ import React from 'react';
 import './rating.scss';
 
 interface RatingProps {
-  percentage: number;
+  skill: number;
 }
 
-const Rating = ({percentage} : RatingProps) => 
-  <div className="rating" title={`${percentage}%`}>
-    <div className="progress" style={{width: `${percentage}%` }}></div>
+const Rating = ({skill} : RatingProps) => 
+  <div className="rating" title={`${skill}/5`}>
+    <div className="progress" style={{width: `${skill/5.0*100}%` }}></div>
   </div>
 
 export default Rating;

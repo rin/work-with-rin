@@ -15,7 +15,7 @@ const Intro = ({ email }: IntroProps) =>
     </p>
     <p>
       My name is Rin. I enjoy coding and building things, and 
-      I like to use it to contribute to a better world.
+      I like to use that to contribute to a better world.
     </p>
     <p>
       The last two years, I've worked fully remotely with a team 

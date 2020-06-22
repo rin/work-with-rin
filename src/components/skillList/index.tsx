@@ -12,7 +12,7 @@ const SkillList = ({ skills } : SkillListInterface) => (
         ):(
           <>{name}</>
         )}
-        <Rating percentage={rating} />
+        <Rating skill={rating} />
       </li>
     ))}
   </ul>

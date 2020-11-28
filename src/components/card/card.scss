@@ -7,9 +7,9 @@
   margin-top: 0;
   background: $cardTitleBackgroundColor;
   color: $cardTitleColor;
-  @include themify($themes) { 
-    background-color: themed('cardTitleBackgroundColor'); 
-    color: themed('cardTitleColor'); 
+  @include themify($themes) {
+    background-color: themed('cardTitleBackgroundColor');
+    color: themed('cardTitleColor');
   }
   padding: 0.5em;
   border-radius: $borderRadius;
@@ -17,8 +17,8 @@
   font-size: 1.4em;
   &:hover {
     background-color: $cardTitleHoverBackgroundColor;
-    @include themify($themes) { 
-      background-color: themed('cardTitleBackgroundHoverColor'); 
+    @include themify($themes) {
+      background-color: themed('cardTitleBackgroundHoverColor');
     }
   }
 }
@@ -64,10 +64,10 @@
     width: stretch;
     min-height: 0;
   }
-  
+
 
   a {
-    color: black;
+    color: #2b2b2b;
   }
 
   ul {
@@ -80,50 +80,50 @@
   }
   &:nth-of-type(1) {
     background: $cardBackground1;
-    @include themify($themes) { 
-      background-color: themed('cardBackground1');  
+    @include themify($themes) {
+      background-color: themed('cardBackground1');
     }
   }
-  
+
   &:nth-of-type(2) {
     background: $cardBackground2;
-    @include themify($themes) { 
-      background-color: themed('cardBackground2');  
+    @include themify($themes) {
+      background-color: themed('cardBackground2');
     }
   }
-  
+
   &:nth-of-type(3) {
     background: $cardBackground3;
-    @include themify($themes) { 
-      background-color: themed('cardBackground3');  
+    @include themify($themes) {
+      background-color: themed('cardBackground3');
     }
   }
-  
+
   &:nth-of-type(4) {
     background: $cardBackground4;
-    @include themify($themes) { 
-      background-color: themed('cardBackground4');  
+    @include themify($themes) {
+      background-color: themed('cardBackground4');
     }
   }
-  
+
   &:nth-of-type(5) {
     background: $cardBackground5;
-    @include themify($themes) { 
-      background-color: themed('cardBackground5');  
+    @include themify($themes) {
+      background-color: themed('cardBackground5');
     }
   }
-  
+
   &:nth-of-type(6) {
     background: $cardBackground6;
-    @include themify($themes) { 
-      background-color: themed('cardBackground6');  
+    @include themify($themes) {
+      background-color: themed('cardBackground6');
     }
-  } 
+  }
 
   &:nth-of-type(7) {
     background: $cardBackground7;
-    @include themify($themes) { 
-      background-color: themed('cardBackground7');  
+    @include themify($themes) {
+      background-color: themed('cardBackground7');
     }
-  }  
+  }
 }
